@@ -1,0 +1,35 @@
+    <html>
+
+        <head>
+
+            <script type= 'text/javascript'>
+                //alert("Herro gruys");
+                function adder(){
+                    //alert("add now");
+                    var a = document.getElementById("n1").value;
+                    var b = document.getElementById("n2").value;
+                    var c = parseInt(a) + parseInt(b);
+                    alert(c);
+                    document.getElementById("output").innerHTML = c;
+                }
+
+
+                
+            </script>
+            
+        </head>
+
+        <body>
+
+
+            First Num: <input type= 'text' id= 'n1'> <br>
+
+            Second Num: <input type= 'text' id= 'n2'> <br>
+
+            <input type= "button" value= 'Add' onClick='adder()'>
+
+            <div id= 'output' > Output  </div>
+
+        </body>
+
+    </html>
