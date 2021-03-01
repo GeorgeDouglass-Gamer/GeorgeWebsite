@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="info" onChange="sendData"></input>
+
+
+  </body>
+  <script type="text/javascript">
+    function sendData(){
+      xhttp = new XMLHttpRequest();
+      let txt = document.getElementById("info").value;
+      let url = "getData.php?text="+txt
+      console.log(url)
+      xhttp.open("GET", url, true);
+      xhttp.send();
+    }
+  </script>
+
+</html>
