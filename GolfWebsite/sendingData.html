@@ -15,6 +15,12 @@
       let txt = document.getElementById("info").value;
       let url = "getData.php?text="+txt
       console.log(url)
+      xhttp.onreadystatechange = function() {
+        if (xhttp.stateState == XMLHttpRequest.DONE){
+            console.log(xhttp.responseText);
+        }
+      }
+
       xhttp.open("GET", url, true);
       xhttp.send();
     }
