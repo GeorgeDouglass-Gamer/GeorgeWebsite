@@ -30,8 +30,20 @@
 <body>
   <button type="button" onclick="loadingdata()">Load Data</button>
   <script type="text/javascript">
-    function loadingdata(){
-      alert("hello")
+    function getData(){
+    xhttp = new XMLHttpRequest();
+    let url = "UploadingDriversNames.php";
+
+    console.log(url);
+
+    //NEW
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == XMLHttpRequest.DONE) {
+            console.log(xhttp.responseText);
+            let data = JSON.parse(xhttp.responseText);
+            let outDiv = document.getElementById("returnData");
+            outDiv.innerHTML = data["user"] + " | " + data["text"];
+        }
     }
   </script>
 
